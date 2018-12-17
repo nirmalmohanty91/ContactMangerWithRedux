@@ -113,15 +113,16 @@ EditContact.propTypes = {
   contact: PropTypes.object.isRequired,
   getContact: PropTypes.func.isRequired
 };
-// const mapStateToProps = state => {
-//   return {
-//     contact: state.contact.contact
-//   }
-// };
-
-const mapStateToProps = state =>( {
+/*const mapStateToProps = state => {
+  return {
     contact: state.contact.contact
-})
+  }
+};
+*/
+//if we have just one return method we can write the code like below
+const mapStateToProps = state => ({
+  contact: state.contact.contact
+});
 
 export default connect(
   mapStateToProps,
