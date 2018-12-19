@@ -113,7 +113,8 @@ EditContact.propTypes = {
   contact: PropTypes.object.isRequired,
   getContact: PropTypes.func.isRequired
 };
-/*const mapStateToProps = state => {
+/*
+const mapStateToProps = state => {
   return {
     contact: state.contact.contact
   }

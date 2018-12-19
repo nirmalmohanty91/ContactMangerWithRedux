@@ -6,6 +6,7 @@ import { getContacts } from "../../actions/contactActions";
 
 class Contacts extends Component {
   componentDidMount() {
+    console.log("2. Within ComponentDidMount(). Calling getContacts()...");
     this.props.getContacts();
   }
 
@@ -29,9 +30,14 @@ Contacts.propTypes = {
   getContacts: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => ({
-  contacts: state.contact.contacts
-});
+const mapStateToProps = state => {
+  console.log("1. Within container.Mapping state to props...");
+  return {contacts: state.contact.contacts}
+}
+
+// const mapStateToProps = state => ({
+//   contacts: state.contact.contacts
+// });
 
 export default connect(
   mapStateToProps,

@@ -8,6 +8,8 @@ import {
 import axios from "axios";
 
 export const getContacts = () => async dispatch => {
+
+  console.log("3. Within getContacts(). Now hitting API to get users...");
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/users"
   );
